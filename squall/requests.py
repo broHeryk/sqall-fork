@@ -52,7 +52,7 @@ class ClientDisconnect(Exception):
     pass
 
 
-class HTTPConnection(Mapping[str, Any]):
+class HTTPConnection(Mapping):
     """
     A base class for incoming HTTP connections, that is used to provide
     any functionality that is common to both `Request` and `WebSocket`.

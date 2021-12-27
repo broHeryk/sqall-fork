@@ -68,6 +68,7 @@ class Squall:
         responses: Optional[Dict[Union[int, str], Dict[str, Any]]] = None,
         deprecated: Optional[bool] = None,
         include_in_schema: bool = True,
+        tracing_enabled: bool = False,
         compression: Optional[Compression] = None,
         **extra: Any,
     ) -> None:
@@ -120,6 +121,7 @@ class Squall:
         self.terms_of_service = terms_of_service
         self.contact = contact
         self.license_info = license_info
+        self.tracing_enabled = tracing_enabled
         self.servers = servers or []
         self.openapi_url = openapi_url
         self.openapi_tags = openapi_tags
