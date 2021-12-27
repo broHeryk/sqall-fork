@@ -81,6 +81,8 @@ class Squall:
             deprecated=deprecated,
             include_in_schema=include_in_schema,
             responses=responses,
+            tracing_enabled=tracing_enabled
+
         )
         # Router methods linking for better user experience like having
         # @app.get(...) instead of @app.get(...)

@@ -8,7 +8,7 @@ from opentelemetry.sdk.trace.export import (
     BatchSpanProcessor,
     ConsoleSpanExporter,
 )
-from context_test import SpanWrapper
+
 
 trace.set_tracer_provider(TracerProvider())
 trace.get_tracer_provider().add_span_processor(
@@ -17,8 +17,6 @@ trace.get_tracer_provider().add_span_processor(
 
 tracer = trace.get_tracer(__name__)
 
-with SpanWrapper('TEST context', False):
-    print('LOG')
 
 
 app = Squall(tracing_enabled=True, )
